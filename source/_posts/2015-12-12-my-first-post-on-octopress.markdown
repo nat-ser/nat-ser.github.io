@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "title"
+title: ".."
 date: 2015-12-12 14:53:41 -0500
 comments: true
 categories: "Flatiron School"
