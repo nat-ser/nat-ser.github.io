@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://nat-ser.github.io/blog/2016/01/18/primitives/</loc>
+    <lastmod>2016-01-18T14:53:41-05:00</lastmod>
+  </url>
+  <url>
+    <loc>http://nat-ser.github.io/blog/2016/01/15/prepare-for-the-worst/</loc>
+    <lastmod>2016-01-15T14:53:41-05:00</lastmod>
+  </url>
+  <url>
+    <loc>http://nat-ser.github.io/blog/archives/</loc>
+  </url>
+  <url>
+    <loc>http://nat-ser.github.io/</loc>
+  </url>
+  <url>
+    <loc>http://nat-ser.github.io/blog/categories/flatiron-school/</loc>
+  </url>
+  <url>
+    <loc>http://nat-ser.github.io/blog/categories/hacks/</loc>
+  </url>
+  <url>
+    <loc>http://nat-ser.github.io/blog/categories/javascript/</loc>
+  </url>
+  <url>
+    <loc>http://nat-ser.github.io/blog/categories/primitives/</loc>
+  </url>
+  <url>
+    <loc>http://nat-ser.github.io/blog/categories/objects/</loc>
+  </url>
+  <url>
+    <loc>http://nat-ser.github.io/blog/categories/data-types/</loc>
+  </url>
+</urlset>

@@ -1,92 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>the stuff that I think.</title>
-  <meta name="author" content="Nataliya">
-
-  
-  <meta name="description" content=""So what's the difference between a Primitive and an Object?" I hope that after reading this, you will be able to find something insightful or &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://nat-ser.github.io">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="the stuff that I think." type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-
-  
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Love the error</a></h1>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  
-  
-</ul>
-
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
+  <title><![CDATA[the stuff that I think.]]></title>
+  <link href="http://nat-ser.github.io/atom.xml" rel="self"/>
+  <link href="http://nat-ser.github.io/"/>
+  <updated>2016-01-18T16:15:17-05:00</updated>
+  <id>http://nat-ser.github.io/</id>
+  <author>
+    <name><![CDATA[Nataliya]]></name>
     
-      <h1 class="entry-title"><a href="/blog/2016/01/18/primitives/">Primitives</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
-
-
-
-<time datetime="2016-01-18T14:53:41-05:00" pubdate data-updated="true">Jan 18th, 2016</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2> "So what's the difference between a Primitive and an Object?"</h2>
+  <entry>
+    <title type="html"><![CDATA[Primitives]]></title>
+    <link href="http://nat-ser.github.io/blog/2016/01/18/primitives/"/>
+    <updated>2016-01-18T14:53:41-05:00</updated>
+    <id>http://nat-ser.github.io/blog/2016/01/18/primitives</id>
+    <content type="html"><![CDATA[<h2> "So what's the difference between a Primitive and an Object?"</h2>
 
 
 <!-- <img src="http://www.reshareit.com/wp-content/uploads/When-you-have-no-answer-gif.gif"> -->
@@ -113,8 +45,8 @@
 <pre><code>  EACH OBJECT HAS UNIQUE IDENTITY                                                      PRIMITIVE DOES NOT
 </code></pre>
 
-<p><img src="/images/object_comparison.png">
-<img src="/images/primitive_comparison.png"></p>
+<p><img src="http://nat-ser.github.io/images/object_comparison.png">
+<img src="http://nat-ser.github.io/images/primitive_comparison.png"></p>
 
 <p>On the left, we create two different objects both equal to an empty array. What makes it an object is the fact that the array data type belongs to object. The comparison returns false because each array is unique even though their value might be the same. This is not the case for  primitives on the right. Primitives are defined by their value and as long as two values are the same the variable comparison will be true. </p>
 
@@ -157,8 +89,8 @@
 <pre><code>OBJECT HAS MUTABILITY                                                           PRIMITIVE DOES NOT
 </code></pre>
 
-<p><img src="/images/object_mutability.png">
-<img src="/images/primative_no_mutability.png"></p>
+<p><img src="http://nat-ser.github.io/images/object_mutability.png">
+<img src="http://nat-ser.github.io/images/primative_no_mutability.png"></p>
 
 <p> As you can see, on the left we created a new String object and gave it a banana method. Since the property banana was assigned to the object, it still works when we call it. With primitive on the right that does not work. Even though the variable "another_string" is also just a string, when we try to assign the property banana to it, it returns undefined.</p>
 
@@ -174,7 +106,7 @@
 <pre><code>WAT
 </code></pre>
 
-<p><img src="/images/why.png"></p>
+<p><img src="http://nat-ser.github.io/images/why.png"></p>
 
 <p> BUT WHYYYYYYY</p>
 
@@ -196,47 +128,19 @@
 <pre><code>BEHIND THE SCENES WHEN YOU TRY TO CALL FUNCTION ON A PRIMITIVE
 </code></pre>
 
-<p><img src="/images/what_am_i.png"></p>
+<p><img src="http://nat-ser.github.io/images/what_am_i.png"></p>
 
 <p>What's happening above is a variation of the .length method. Except slightly different because we are defining our own Number method "whatAmI". By defining it, we make it available to the Number class. When the Wrapper Number Object is called on the 123 number Primitive, our method "whatAmI" is used and for the duration of its use, the number Primitive is actually an object (Number). </p>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2016/01/15/prepare-for-the-worst/">Prepare for the Worst.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<time datetime="2016-01-15T14:53:41-05:00" pubdate data-updated="true">Jan 15th, 2016</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img src="http://cdn2.crushable.com/wp-content/uploads/2014/12/groundhog-day.gif"></p>
+  <entry>
+    <title type="html"><![CDATA[Prepare for the Worst.]]></title>
+    <link href="http://nat-ser.github.io/blog/2016/01/15/prepare-for-the-worst/"/>
+    <updated>2016-01-15T14:53:41-05:00</updated>
+    <id>http://nat-ser.github.io/blog/2016/01/15/prepare-for-the-worst</id>
+    <content type="html"><![CDATA[<p><img src="http://cdn2.crushable.com/wp-content/uploads/2014/12/groundhog-day.gif"></p>
 
 <p>There are awful things that could happen to you in Javascript. It is simultaneously intriguing and
 useful to worry about them. Spending hours on stupid, easily preventable bugs does not appeal to me. Here is a brief summary of things to watch out for:</p>
@@ -253,7 +157,7 @@ useful to worry about them. Spending hours on stupid, easily preventable bugs do
 <pre><code>RIGHT WAY
 </code></pre>
 
-<p><img src="/images/right.png"></p>
+<p><img src="http://nat-ser.github.io/images/right.png"></p>
 
 <p>The 'meow' variable is defined within the IIFE (immediately invoked function expression). It outputs 'I am an awesome local variable' to the console. When you call it outside the scope of function, 'meow' returns undefined, as you would expect.</p>
 
@@ -261,7 +165,7 @@ useful to worry about them. Spending hours on stupid, easily preventable bugs do
 <pre><code>WRONG WAY
 </code></pre>
 
-<p><img src="/images/wrong.png"></p>
+<p><img src="http://nat-ser.github.io/images/wrong.png"></p>
 
 <p> You were too lazy to type 'var' before 'meow'. The IIFE does what you tell it to..but when you call 'meow' outside the function, 'meow' is still remembered as "I am not a local variable because you suck at typing!". This happens because JavaScript interprets the sloppy local declaration as an "implied global" variable.</p>
 
@@ -306,107 +210,7 @@ useful to worry about them. Spending hours on stupid, easily preventable bugs do
 
 <p> All output "9" and bypass the parser bug</p>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-   
-<form action="https://www.google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:nat-ser.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2016/01/18/primitives/">Primitives</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2016/01/15/prepare-for-the-worst/">Prepare for the Worst.</a>
-      </li>
-    
-  </ul>
-</section>
-
-
-
-
-
-  
-</aside>
-
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2016 - Nataliya -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-<script>
-  $(document).ready(function() {  
-    var stickyNavTop = $('nav').offset().top;  
-      
-    var stickyNav = function(){  
-      var scrollTop = $(window).scrollTop(); 
-      var navHasClassSticky = $('nav').hasClass('sticky');
-
-      if (scrollTop > stickyNavTop && navHasClassSticky) {   
-        return true;
-      } else if (scrollTop > stickyNavTop) {
-        $('nav').hide();
-        $('nav').addClass('sticky');
-        $('nav').fadeIn('2000');
-      } else {  
-        $('nav').removeClass('sticky');   
-      }  
-    };  
-      
-    stickyNav();  
-      
-    $(window).scroll(function() {  
-      stickyNav();  
-    });  
-  });  
-</script>
-
-
-</body>
-</html>
+</feed>
