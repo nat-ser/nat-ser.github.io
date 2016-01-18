@@ -1,0 +1,21 @@
+******Andrew Robbins
+//data types
+//primitives
+Numbers, string, booleans, Symbols, undefined and null
+//objects
+
+///main differences
+mutability-ability to add and remove properties.
+comparison- value vs reference
+
+///wrapper objects
+- allow to call method on a primitives
+- temporarily change the Primitive to an Object—allowing you to use the length method to mutate it. This temporary Object is called a Wrapper Object.
+
+
+each object has a unique identity and is only (strictly) equal to itself:
+
+
+
+"abc".length
+ In this case the string value is coerced to a string object in order to access the property length. The string object is only used for a fraction of second after which it is sacrificed to the Gods of garbage collection
