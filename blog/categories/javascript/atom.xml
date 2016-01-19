@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[the stuff that I think.]]></title>
-  <link href="http://nat-ser.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Javascript | the stuff that I think.]]></title>
+  <link href="http://nat-ser.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://nat-ser.github.io/"/>
   <updated>2016-01-19T13:15:19-05:00</updated>
   <id>http://nat-ser.github.io/</id>
@@ -24,7 +24,7 @@
 <!-- <img src="http://www.reshareit.com/wp-content/uploads/When-you-have-no-answer-gif.gif"> -->
 
 
-<p><img src="http://i.imgur.com/qQ9ifnb.gif"></p>
+<p><img class="<a" src="href="http://i.imgur.com/qQ9ifnb.gif">http://i.imgur.com/qQ9ifnb.gif</a>"></p>
 
 <p>I hope that after reading this, you will be able to find something insightful or interesting to say on the subject. </p>
 
@@ -45,8 +45,8 @@
 <pre><code>  EACH OBJECT HAS UNIQUE IDENTITY                                                      PRIMITIVE DOES NOT
 </code></pre>
 
-<p><img src="http://nat-ser.github.io/images/object_comparison.png">
-<img src="http://nat-ser.github.io/images/primitive_comparison.png"></p>
+<p><img src="/images/object_comparison.png">
+<img src="/images/primitive_comparison.png"></p>
 
 <p>On the left, we create two different objects both equal to an empty array. What makes it an object is the fact that the array data type belongs to object. The comparison returns false because each array is unique even though their value might be the same. This is not the case for  primitives on the right. Primitives are defined by their value and as long as two values are the same the variable comparison will be true. </p>
 
@@ -56,7 +56,7 @@
 <p> 2) <strong>Mutability</strong> - You can assign properties or methods to Objects but you cannot do the same with Primitives. Properties or methods can be defined in the object constructor or directly added to the object. Here is what I mean by defining and adding properties or methods to an object: </p>
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -67,21 +67,20 @@
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
+<span class='line-number'>12</span>
 </pre></td><td class='code'><pre><code class='JavaScript'><span class='line'>  <span class="kd">var</span> <span class="nx">Food</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">){</span>
 </span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>                <span class="c1">//property</span>
 </span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">eat</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>         <span class="c1">//method</span>
-</span><span class='line'>      <span class="k">return</span> <span class="s2">&quot;Yum!&quot;</span><span class="p">;</span>
+</span><span class='line'>      <span class="k">return</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">Yum</span><span class="o">!&amp;</span><span class="nx">rdquo</span><span class="p">;;</span>
 </span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>  <span class="o">&gt;</span><span class="nx">pizza</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Food</span><span class="p">(</span><span class="s2">&quot;pizza&quot;</span><span class="p">)</span>
-</span><span class='line'>  <span class="o">&gt;</span><span class="nx">pizza</span><span class="p">.</span><span class="nx">name</span>                     <span class="c1">//outputs =&gt; &quot;pizza&quot;</span>
-</span><span class='line'>  <span class="o">&gt;</span><span class="nx">pizza</span><span class="p">.</span><span class="nx">eat</span>                      <span class="c1">//outputs =&gt;&quot;yum&quot;</span>
-</span><span class='line'>  <span class="o">&gt;</span><span class="nx">pizza</span><span class="p">.</span><span class="nx">throw_away</span> <span class="o">=</span> <span class="s2">&quot;NOOO&quot;</span>    <span class="c1">//new property assigned outside the constructor</span>
-</span><span class='line'>  <span class="o">&gt;</span><span class="nx">puzza</span><span class="p">.</span><span class="nx">throw_away</span>              <span class="c1">// outputs =&gt; &quot;NOOO&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
+</span><span class='line'>  <span class="p">}</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">blockquote</span><span class="o">&gt;&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">pizza</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Food</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">pizza</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;)</span>
+</span><span class='line'><span class="nx">pizza</span><span class="p">.</span><span class="nx">name</span>                     <span class="c1">//outputs =&gt; &amp;ldquo;pizza&amp;rdquo;</span>
+</span><span class='line'><span class="nx">pizza</span><span class="p">.</span><span class="nx">eat</span>                      <span class="c1">//outputs =&gt;&amp;ldquo;yum&amp;rdquo;</span>
+</span><span class='line'><span class="nx">pizza</span><span class="p">.</span><span class="nx">throw_away</span> <span class="o">=</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">NOOO</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span>    <span class="c1">//new property assigned outside the constructor</span>
+</span><span class='line'><span class="nx">puzza</span><span class="p">.</span><span class="nx">throw_away</span>              <span class="c1">// outputs =&gt; &amp;ldquo;NOOO&amp;rdquo;</span>
+</span></code></pre></td></tr></table></div></figure></p></blockquote>
 
 <p> You cannot do this with Primitives. Below is a side by side comparison of what happens when you try.</p>
 
@@ -89,8 +88,8 @@
 <pre><code>OBJECT HAS MUTABILITY                                                           PRIMITIVE DOES NOT
 </code></pre>
 
-<p><img src="http://nat-ser.github.io/images/object_mutability.png">
-<img src="http://nat-ser.github.io/images/primative_no_mutability.png"></p>
+<p><img src="/images/object_mutability.png">
+<img src="/images/primative_no_mutability.png"></p>
 
 <p> As you can see, on the left we created a new String object and gave it a banana method. Since the property banana was assigned to the object, it still works when we call it. With primitive on the right that does not work. Even though the variable "another_string" is also just a string, when we try to assign the property banana to it, it returns undefined.</p>
 
@@ -106,7 +105,7 @@
 <pre><code>WAT
 </code></pre>
 
-<p><img src="http://nat-ser.github.io/images/why.png"></p>
+<p><img src="/images/why.png"></p>
 
 <p> BUT WHYYYYYYY</p>
 
@@ -114,7 +113,7 @@
 <p> If primitives don't have properties, then how can you call a method of .length on the primitive above?</p>
 
 
-<p> <img src="http://cdn1.theodysseyonline.com/files/2015/10/31/635818589835734249370285774_1dfc00bbdb005b909c17c2a19667e8a1.gif" title="img" ></br></p>
+<p> <img class="<a" src="href="http://cdn1.theodysseyonline.com/files/2015/10/31/635818589835734249370285774_1dfc00bbdb005b909c17c2a19667e8a1.gif">http://cdn1.theodysseyonline.com/files/2015/10/31/635818589835734249370285774_1dfc00bbdb005b909c17c2a19667e8a1.gif</a>" title="img" ></br></p>
 
 <p> <p>This is where <strong>Wrapper Objects</strong> come in. A primitive will be coerced into an object to access method called on primitive. The wrapper object is that temporary object that is used. When any method is called on a primitive, this is what happens:</p></br>
  JavaScript says..</br>
@@ -128,7 +127,7 @@
 <pre><code>BEHIND THE SCENES WHEN YOU TRY TO CALL FUNCTION ON A PRIMITIVE
 </code></pre>
 
-<p><img src="http://nat-ser.github.io/images/what_am_i.png"></p>
+<p><img src="/images/what_am_i.png"></p>
 
 <p>What's happening above is a variation of the .length method. Except slightly different because we are defining our own Number method "whatAmI". By defining it, we make it available to the Number class. When the Wrapper Number Object is called on the 123 number Primitive, our method "whatAmI" is used and for the duration of its use, the number Primitive is actually an object (Number). </p>
 
@@ -140,7 +139,7 @@
     <link href="http://nat-ser.github.io/blog/2016/01/15/prepare-for-the-worst/"/>
     <updated>2016-01-15T14:53:41-05:00</updated>
     <id>http://nat-ser.github.io/blog/2016/01/15/prepare-for-the-worst</id>
-    <content type="html"><![CDATA[<p><img src="http://cdn2.crushable.com/wp-content/uploads/2014/12/groundhog-day.gif"></p>
+    <content type="html"><![CDATA[<p><img class="<a" src="href="http://cdn2.crushable.com/wp-content/uploads/2014/12/groundhog-day.gif">http://cdn2.crushable.com/wp-content/uploads/2014/12/groundhog-day.gif</a>"></p>
 
 <p>There are awful things that could happen to you in Javascript. It is simultaneously intriguing and
 useful to worry about them. Spending hours on stupid, easily preventable bugs does not appeal to me. Here is a brief summary of things to watch out for:</p>
@@ -157,7 +156,7 @@ useful to worry about them. Spending hours on stupid, easily preventable bugs do
 <pre><code>RIGHT WAY
 </code></pre>
 
-<p><img src="http://nat-ser.github.io/images/right.png"></p>
+<p><img src="/images/right.png"></p>
 
 <p>The 'meow' variable is defined within the IIFE (immediately invoked function expression). It outputs 'I am an awesome local variable' to the console. When you call it outside the scope of function, 'meow' returns undefined, as you would expect.</p>
 
@@ -165,7 +164,7 @@ useful to worry about them. Spending hours on stupid, easily preventable bugs do
 <pre><code>WRONG WAY
 </code></pre>
 
-<p><img src="http://nat-ser.github.io/images/wrong.png"></p>
+<p><img src="/images/wrong.png"></p>
 
 <p> You were too lazy to type 'var' before 'meow'. The IIFE does what you tell it to..but when you call 'meow' outside the function, 'meow' is still remembered as "I am not a local variable because you suck at typing!". This happens because JavaScript interprets the sloppy local declaration as an "implied global" variable.</p>
 
@@ -186,10 +185,9 @@ useful to worry about them. Spending hours on stupid, easily preventable bugs do
 <pre><code>WRONG WAY
 </code></pre>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">9</span><span class="o">.</span><span class="n">toString</span><span class="p">();</span> <span class="sr">//</span><span class="no">SyntaxError</span>
-</span></code></pre></td></tr></table></div></figure>
-
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p> JavaScript parser interprets dot notation as floating point literal.</p>
 
@@ -197,16 +195,13 @@ useful to worry about them. Spending hours on stupid, easily preventable bugs do
 <pre><code>RIGHT WAY
 </code></pre>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">9</span><span class="o">.</span><span class="n">.toString</span><span class="p">();</span> <span class="sr">//</span> <span class="n">has</span> <span class="mi">2</span> <span class="n">dots</span>
 </span><span class='line'><span class="mi">9</span> <span class="o">.</span><span class="n">toString</span><span class="p">();</span> <span class="sr">//</span> <span class="n">space</span> <span class="n">to</span> <span class="n">left</span> <span class="n">of</span> <span class="n">block</span>
 </span><span class='line'><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">toString</span><span class="p">();</span> <span class="sr">//</span> <span class="mi">9</span> <span class="n">is</span> <span class="n">evaluated</span> <span class="n">first</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p> All output "9" and bypass the parser bug</p>
 
