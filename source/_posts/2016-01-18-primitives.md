@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Primitives"
+title: "Primitives!!"
 date: 2016-01-18 14:53:41 -0500
 comments: true
 categories: "flatiron_school primitives objects data_types JavaScript"
