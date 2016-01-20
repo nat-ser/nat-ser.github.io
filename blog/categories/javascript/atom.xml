@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Javascript | the stuff that I think.]]></title>
+  <title><![CDATA[Category: Javascript | meow]]></title>
   <link href="http://nat-ser.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://nat-ser.github.io/"/>
-  <updated>2016-01-19T13:17:22-05:00</updated>
+  <updated>2016-01-19T23:30:25-05:00</updated>
   <id>http://nat-ser.github.io/</id>
   <author>
     <name><![CDATA[Nataliya]]></name>
