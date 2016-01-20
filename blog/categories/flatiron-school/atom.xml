@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Flatiron_school | meow]]></title>
+  <title><![CDATA[Category: Flatiron_school | instance of Nataliya]]></title>
   <link href="http://nat-ser.github.io/blog/categories/flatiron-school/atom.xml" rel="self"/>
   <link href="http://nat-ser.github.io/"/>
-  <updated>2016-01-19T23:30:25-05:00</updated>
+  <updated>2016-01-19T23:43:32-05:00</updated>
   <id>http://nat-ser.github.io/</id>
   <author>
     <name><![CDATA[Nataliya]]></name>
@@ -205,6 +205,10 @@ useful to worry about them. Spending hours on stupid, easily preventable bugs do
 
 <p> All output "9" and bypass the parser bug</p>
 
+
+
+
+<p><h3> In progress&hellip; >/h3></p>
 ]]></content>
   </entry>
   
