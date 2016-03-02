@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Primitives | instance of Nataliya]]></title>
   <link href="http://nat-ser.github.io/blog/categories/primitives/atom.xml" rel="self"/>
   <link href="http://nat-ser.github.io/"/>
-  <updated>2016-01-19T23:43:32-05:00</updated>
+  <updated>2016-03-01T23:34:54-05:00</updated>
   <id>http://nat-ser.github.io/</id>
   <author>
     <name><![CDATA[Nataliya]]></name>
@@ -14,29 +14,22 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Primitives]]></title>
-    <link href="http://nat-ser.github.io/blog/2016/01/18/primitives/"/>
+    <title type="html"><![CDATA[Wrapper Objects and Primitives Behind the Scenes.]]></title>
+    <link href="http://nat-ser.github.io/blog/2016/01/18/wrapper-objects-and-primitives-behind-the-scenes/"/>
     <updated>2016-01-18T14:53:41-05:00</updated>
-    <id>http://nat-ser.github.io/blog/2016/01/18/primitives</id>
-    <content type="html"><![CDATA[<h2> "So what's the difference between a Primitive and an Object?"</h2>
+    <id>http://nat-ser.github.io/blog/2016/01/18/wrapper-objects-and-primitives-behind-the-scenes</id>
+    <content type="html"><![CDATA[<p>In order to get deep with wrapper objects and how primitives really work, we will quickly go over the basics of objects and primitives, compare them, and then get to the good stuff.</p>
+
+<h4> What are the differences between Objects and Primitives?</h4>
 
 
-<!-- <img src="http://www.reshareit.com/wp-content/uploads/When-you-have-no-answer-gif.gif"> -->
-
-
-<p><img class="<a" src="href="http://i.imgur.com/qQ9ifnb.gif">http://i.imgur.com/qQ9ifnb.gif</a>"></p>
-
-<p>I hope that after reading this, you will be able to find something insightful or interesting to say on the subject. </p>
-
-
-<p>Let's start off with some nice definitions by people that are smart:</p>
-
-
-<p><strong>Primitive</strong> -&ldquo;Type provided by the system. The primitive types are treated by JavaScript as value types and when you pass them around they go as values.&rdquo; (Wikibooks?) Primitive types are: Number, Boolean, String, Symbol, undefined, and null.</p>
+<p><img class="<a" src="href="http://i.imgur.com/qQ9ifnb.gif">http://i.imgur.com/qQ9ifnb.gif</a>">
+<br>
+<strong>Primitive</strong> -&ldquo;Type provided by the system. The primitive types are treated by JavaScript as value types and when you pass them around they go as values.&rdquo; (Wikibooks?) Primitive types are: Number, Boolean, String, Symbol, undefined, and null.</p>
 
 <p><strong>Object</strong> - &ldquo;Container of properties, where a property has a name and a value&rdquo; (Douglas Crockford) Basically, everything else that is not a Primitive is an object.</p>
 
-<h2> Main Differences between Primitives and Objects </h2>
+<h4> Main Differences between Primitives and Objects </h4>
 
 
 <p> 1) <strong>Comparison</strong> - In broad terms, Primitives are defined by their value while Objects are defined by their reference. In other words, every time you use a Primitive data type, like a number, it is equal to any other variable with the same value. However, objects all have a unique identity only equal to itself even if their values are equal. Let's look at an example of this:   </p>
@@ -96,7 +89,7 @@
 
 
 
-<h2>Wrapper Objects</h2>
+<h4>Wrapper Objects</h4>
 
 
 <p> Great, JavaScript is finally making some sense. Let's look at this next example. </p>

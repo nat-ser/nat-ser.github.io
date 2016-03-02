@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://nat-ser.github.io/blog/2016/01/18/primitives/</loc>
+    <loc>http://nat-ser.github.io/blog/2016/02/21/parser-with-method-chaining/</loc>
+    <lastmod>2016-02-21T00:00:00-05:00</lastmod>
+  </url>
+  <url>
+    <loc>http://nat-ser.github.io/blog/2016/01/18/wrapper-objects-and-primitives-behind-the-scenes/</loc>
     <lastmod>2016-01-18T14:53:41-05:00</lastmod>
   </url>
   <url>
-    <loc>http://nat-ser.github.io/blog/2016/01/15/prepare-for-the-worst/</loc>
-    <lastmod>2016-01-15T14:53:41-05:00</lastmod>
+    <loc>http://nat-ser.github.io/blog/2015/12/15/prepare-for-the-worst/</loc>
+    <lastmod>2015-12-15T14:53:41-05:00</lastmod>
   </url>
   <url>
     <loc>http://nat-ser.github.io/blog/archives/</loc>

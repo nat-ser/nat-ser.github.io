@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Hacks | instance of Nataliya]]></title>
   <link href="http://nat-ser.github.io/blog/categories/hacks/atom.xml" rel="self"/>
   <link href="http://nat-ser.github.io/"/>
-  <updated>2016-01-19T23:43:32-05:00</updated>
+  <updated>2016-03-01T23:34:54-05:00</updated>
   <id>http://nat-ser.github.io/</id>
   <author>
     <name><![CDATA[Nataliya]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Prepare for the Worst.]]></title>
-    <link href="http://nat-ser.github.io/blog/2016/01/15/prepare-for-the-worst/"/>
-    <updated>2016-01-15T14:53:41-05:00</updated>
-    <id>http://nat-ser.github.io/blog/2016/01/15/prepare-for-the-worst</id>
+    <link href="http://nat-ser.github.io/blog/2015/12/15/prepare-for-the-worst/"/>
+    <updated>2015-12-15T14:53:41-05:00</updated>
+    <id>http://nat-ser.github.io/blog/2015/12/15/prepare-for-the-worst</id>
     <content type="html"><![CDATA[<p><img class="<a" src="href="http://cdn2.crushable.com/wp-content/uploads/2014/12/groundhog-day.gif">http://cdn2.crushable.com/wp-content/uploads/2014/12/groundhog-day.gif</a>"></p>
 
 <p>There are awful things that could happen to you in Javascript. It is simultaneously intriguing and
@@ -26,7 +26,7 @@ useful to worry about them. Spending hours on stupid, easily preventable bugs do
 
 
 
-<h2> Don't define local variables like an asshole </h2>
+<h4> Don't define local variables like an asshole </h4>
 
 
 <p> People are very fussy about JavaScript's global variables. Here's the reason. A global variable is one that is available from any function in the program as opposed to just within the block of the method. Global variables are the default in JavaScript. If you want a variable to have local scope, you need to specify the declaration with a var ___ keyword. This is an example of how to do this right:</p>
@@ -55,7 +55,7 @@ useful to worry about them. Spending hours on stupid, easily preventable bugs do
 
 
 
-<h2> How to call a method on a number </h2>
+<h4> How to call a method on a number </h4>
 
 
 <p> For example if you want to use dot notation to call a function on a number this would blow up:</p>
@@ -87,7 +87,8 @@ useful to worry about them. Spending hours on stupid, easily preventable bugs do
 
 
 
-<p><h3> In progress&hellip; >/h3></p>
+<h3> In progress... </h3>
+
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Flatiron_school | instance of Nataliya]]></title>
   <link href="http://nat-ser.github.io/blog/categories/flatiron-school/atom.xml" rel="self"/>
   <link href="http://nat-ser.github.io/"/>
-  <updated>2016-01-19T23:43:32-05:00</updated>
+  <updated>2016-03-01T23:34:54-05:00</updated>
   <id>http://nat-ser.github.io/</id>
   <author>
     <name><![CDATA[Nataliya]]></name>
@@ -14,29 +14,250 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Primitives]]></title>
-    <link href="http://nat-ser.github.io/blog/2016/01/18/primitives/"/>
+    <title type="html"><![CDATA[Parser With Method Chaining]]></title>
+    <link href="http://nat-ser.github.io/blog/2016/02/21/parser-with-method-chaining/"/>
+    <updated>2016-02-21T00:00:00-05:00</updated>
+    <id>http://nat-ser.github.io/blog/2016/02/21/parser-with-method-chaining</id>
+    <content type="html"><![CDATA[<h4>Chaining as we know it </h4>
+
+
+<p>When you hear chaining methods, you think of something like this:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='Ruby'><span class='line'><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">steak</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="o">.</span><span class="n">upcase</span><span class="o">.</span><span class="n">reverse</span>
+</span></code></pre></td></tr></table></div></figure>
+However, what I took for granted was that &lsquo;upcase&rsquo; and &lsquo;reverse&rsquo; are built-in methods of the String Class, which means that both of those methods are available to any string because it is an instance of the String Class.</p>
+
+<h4> Custom chaining</h4>
+
+
+<p>What happens when you create your own class and want to chain methods together in this manner? For example, you want to build a data parser that allows you to do this:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='Ruby'><span class='line'><span class="n">food_hash</span> <span class="o">=</span> <span class="no">Finder</span><span class="o">.</span><span class="n">new</span>
+</span><span class='line'><span class="n">food_hash</span><span class="o">.</span><span class="n">product</span><span class="o">.</span><span class="n">location</span>
+</span></code></pre></td></tr></table></div></figure>
+instead of:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='Ruby'><span class='line'><span class="n">food_hash</span> <span class="o">=</span> <span class="no">Finder</span><span class="o">.</span><span class="n">new</span>
+</span><span class='line'><span class="n">food_hash</span><span class="o">[</span><span class="ss">:product</span><span class="o">][</span><span class="ss">:location</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+This is more complicated than it looks. Let&rsquo;s dive right into an example that shows how to do this.</p>
+
+<h4>Step by Step Example of Method Chaining </h4>
+
+
+<h4>Problem:</h4>
+
+
+<p>We have this nested hash called food_info.
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='Ruby'><span class='line'><span class="n">food_info</span> <span class="o">=</span> <span class="p">{</span><span class="ss">fridges</span><span class="p">:</span>
+</span><span class='line'>              <span class="p">{</span><span class="ss">person</span><span class="p">:</span>
+</span><span class='line'>                <span class="p">{</span><span class="ss">grandma</span><span class="p">:</span><span class="o">[&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">cauliflower</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">sour</span> <span class="n">cream</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">couch</span> <span class="n">candy</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>                <span class="ss">flatiron_school</span><span class="p">:</span> <span class="o">[&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">donuts</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">coffee</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">siracha</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>                <span class="ss">steven</span><span class="p">:</span><span class="o">[&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">beef</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">ham</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="o">]</span><span class="p">}</span>
+</span><span class='line'>              <span class="p">},</span>
+</span><span class='line'>            <span class="ss">restaurants</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">McDonalds</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+Your parsing code should return an object that allows you to access attributes using method calls:</p>
+
+<p>puts object.fridges.person.grandma</p>
+
+<h4>outputs [&ldquo;cauliflower&rdquo;, &ldquo;sour cream&rdquo;, &ldquo;couch candy&rdquo;]</h4>
+
+<p>First example, is simply searching by key. The second example shows what would happen if we tried to do the same action in a different way.</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='Ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;h1&gt;this is the normal way to access value&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">food_info</span><span class="o">[</span><span class="ss">:fridges</span><span class="o">][</span><span class="ss">:person</span><span class="o">][</span><span class="ss">:grandma</span><span class="o">]</span> <span class="c1">##outputs [&amp;ldquo;cauliflower&amp;rdquo;, &amp;ldquo;sour cream&amp;rdquo;, &amp;ldquo;couch candy&amp;rdquo;]&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">out</span> <span class="n">ultimate</span> <span class="n">objective</span> <span class="n">is</span> <span class="k">for</span> <span class="n">this</span> <span class="n">to</span> <span class="n">work</span> <span class="n">but</span> <span class="n">as</span> <span class="n">of</span> <span class="n">now</span><span class="p">,</span> <span class="n">it</span> <span class="n">breaks</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt; puts food_info.fridges.person.grandma ##outputs NoMethoderror</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>When we run this code it outputs the following:
+<img src="/images/oh_no.png"></p>
+
+<p>As you can see, the first method works in the way we would expect it to. The second blows up because we cannot call the <strong>fridges</strong> method because it does not exist.
+Let&rsquo;s say <strong>fridges</strong> method did exist as part of the class and also <strong>person</strong> and <strong>grandma</strong> methods. If we called
+<strong>puts food_info.fridges.person.grandma</strong>
+it would also blow up at <strong>.person</strong> and complain that the method does not exist. This is because the <strong>food_info.fridges</strong> is no longer an instance of the same class but rather an instance of the hash class.</p>
+
+<p>Below are the two ways to fix this.</p>
+
+<h4>Solution 1</h4>
+
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='Ruby'><span class='line'><span class="k">class</span> <span class="nc">Finder</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;  def initialize(food_info)</span>
+</span><span class='line'><span class="sr">    @food_info = food_info</span>
+</span><span class='line'><span class="sr">  end&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>  <span class="k">def</span> <span class="nf">fridges</span>
+</span><span class='line'>  <span class="c1">#after this runs, alters value of @food_info to @food_info[:fridges]</span>
+</span><span class='line'>    <span class="no">Finder</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="vi">@food_info</span><span class="o">[</span><span class="ss">:fridges</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;  def person</span>
+</span><span class='line'><span class="sr">  #so here we don&amp;rsquo;t have to call the whole chain @food_info[:fridges][:person]</span>
+</span><span class='line'><span class="sr">    Finder.new(@food_info[:person])</span>
+</span><span class='line'><span class="sr">  end&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>  <span class="k">def</span> <span class="nf">grandma</span>
+</span><span class='line'>    <span class="vi">@food_info</span><span class="o">[</span><span class="ss">:grandma</span><span class="o">]</span>
+</span><span class='line'>  <span class="k">end</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;end</span>
+</span><span class='line'><span class="sr">hungerz = Finder.new(food_info)&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="nb">puts</span> <span class="n">hungerz</span><span class="o">.</span><span class="n">fridges</span><span class="o">.</span><span class="n">person</span><span class="o">.</span><span class="n">grandma</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;h4&gt;outputs [&amp;ldquo;cauliflower&amp;rdquo;, &amp;ldquo;sour cream&amp;rdquo;, &amp;ldquo;couch candy&amp;rdquo;]&lt;/</span><span class="n">h4</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+This solves the problem of method availability by creating a new instance of the class as a return value for each method. This allows us to then call the methods in one line. What this means is that when one instance method gets called, it return an actual instance of the class instead of a regular return value. That way another method of the same class can be called on the return value of its sibling method.</p>
+
+<p>In the solution above, after the fridges method is first called, it returns an instance of the Finder class itself so that the person method is no longer getting called on a Hash value. The grandma method does not return an instance of the class because it is last in the chain.</p>
+
+<h4>Solution 2</h4>
+
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class='Ruby'><span class='line'><span class="k">class</span> <span class="nc">Finder</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;  def initialize(food_info)</span>
+</span><span class='line'><span class="sr">    @food_info = food_info</span>
+</span><span class='line'><span class="sr">  end&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>  <span class="k">def</span> <span class="nf">fridges</span>
+</span><span class='line'>    <span class="vi">@fridges</span> <span class="o">=</span> <span class="vi">@food_info</span><span class="o">[</span><span class="ss">:fridges</span><span class="o">]</span>
+</span><span class='line'>    <span class="nb">self</span>
+</span><span class='line'>  <span class="k">end</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;  def person</span>
+</span><span class='line'><span class="sr">    @person = @fridges[:person]</span>
+</span><span class='line'><span class="sr">    self</span>
+</span><span class='line'><span class="sr">  end&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>  <span class="k">def</span> <span class="nf">grandma</span>
+</span><span class='line'>    <span class="vi">@person</span><span class="o">[</span><span class="ss">:grandma</span><span class="o">]</span>
+</span><span class='line'>  <span class="k">end</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;end&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="n">hungerz</span> <span class="o">=</span> <span class="no">Finder</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">food_info</span><span class="p">)</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;puts hungerz.fridges.person.grandma&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h4</span><span class="o">&gt;</span><span class="n">outputs</span> <span class="o">[&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">cauliflower</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">sour</span> <span class="n">cream</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">couch</span> <span class="n">candy</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="o">]&lt;</span><span class="sr">/h4&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>This is another solution using self to do the same thing as above.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Wrapper Objects and Primitives Behind the Scenes.]]></title>
+    <link href="http://nat-ser.github.io/blog/2016/01/18/wrapper-objects-and-primitives-behind-the-scenes/"/>
     <updated>2016-01-18T14:53:41-05:00</updated>
-    <id>http://nat-ser.github.io/blog/2016/01/18/primitives</id>
-    <content type="html"><![CDATA[<h2> "So what's the difference between a Primitive and an Object?"</h2>
+    <id>http://nat-ser.github.io/blog/2016/01/18/wrapper-objects-and-primitives-behind-the-scenes</id>
+    <content type="html"><![CDATA[<p>In order to get deep with wrapper objects and how primitives really work, we will quickly go over the basics of objects and primitives, compare them, and then get to the good stuff.</p>
+
+<h4> What are the differences between Objects and Primitives?</h4>
 
 
-<!-- <img src="http://www.reshareit.com/wp-content/uploads/When-you-have-no-answer-gif.gif"> -->
-
-
-<p><img class="<a" src="href="http://i.imgur.com/qQ9ifnb.gif">http://i.imgur.com/qQ9ifnb.gif</a>"></p>
-
-<p>I hope that after reading this, you will be able to find something insightful or interesting to say on the subject. </p>
-
-
-<p>Let's start off with some nice definitions by people that are smart:</p>
-
-
-<p><strong>Primitive</strong> -&ldquo;Type provided by the system. The primitive types are treated by JavaScript as value types and when you pass them around they go as values.&rdquo; (Wikibooks?) Primitive types are: Number, Boolean, String, Symbol, undefined, and null.</p>
+<p><img class="<a" src="href="http://i.imgur.com/qQ9ifnb.gif">http://i.imgur.com/qQ9ifnb.gif</a>">
+<br>
+<strong>Primitive</strong> -&ldquo;Type provided by the system. The primitive types are treated by JavaScript as value types and when you pass them around they go as values.&rdquo; (Wikibooks?) Primitive types are: Number, Boolean, String, Symbol, undefined, and null.</p>
 
 <p><strong>Object</strong> - &ldquo;Container of properties, where a property has a name and a value&rdquo; (Douglas Crockford) Basically, everything else that is not a Primitive is an object.</p>
 
-<h2> Main Differences between Primitives and Objects </h2>
+<h4> Main Differences between Primitives and Objects </h4>
 
 
 <p> 1) <strong>Comparison</strong> - In broad terms, Primitives are defined by their value while Objects are defined by their reference. In other words, every time you use a Primitive data type, like a number, it is equal to any other variable with the same value. However, objects all have a unique identity only equal to itself even if their values are equal. Let's look at an example of this:   </p>
@@ -96,7 +317,7 @@
 
 
 
-<h2>Wrapper Objects</h2>
+<h4>Wrapper Objects</h4>
 
 
 <p> Great, JavaScript is finally making some sense. Let's look at this next example. </p>
@@ -136,9 +357,9 @@
   
   <entry>
     <title type="html"><![CDATA[Prepare for the Worst.]]></title>
-    <link href="http://nat-ser.github.io/blog/2016/01/15/prepare-for-the-worst/"/>
-    <updated>2016-01-15T14:53:41-05:00</updated>
-    <id>http://nat-ser.github.io/blog/2016/01/15/prepare-for-the-worst</id>
+    <link href="http://nat-ser.github.io/blog/2015/12/15/prepare-for-the-worst/"/>
+    <updated>2015-12-15T14:53:41-05:00</updated>
+    <id>http://nat-ser.github.io/blog/2015/12/15/prepare-for-the-worst</id>
     <content type="html"><![CDATA[<p><img class="<a" src="href="http://cdn2.crushable.com/wp-content/uploads/2014/12/groundhog-day.gif">http://cdn2.crushable.com/wp-content/uploads/2014/12/groundhog-day.gif</a>"></p>
 
 <p>There are awful things that could happen to you in Javascript. It is simultaneously intriguing and
@@ -147,7 +368,7 @@ useful to worry about them. Spending hours on stupid, easily preventable bugs do
 
 
 
-<h2> Don't define local variables like an asshole </h2>
+<h4> Don't define local variables like an asshole </h4>
 
 
 <p> People are very fussy about JavaScript's global variables. Here's the reason. A global variable is one that is available from any function in the program as opposed to just within the block of the method. Global variables are the default in JavaScript. If you want a variable to have local scope, you need to specify the declaration with a var ___ keyword. This is an example of how to do this right:</p>
@@ -176,7 +397,7 @@ useful to worry about them. Spending hours on stupid, easily preventable bugs do
 
 
 
-<h2> How to call a method on a number </h2>
+<h4> How to call a method on a number </h4>
 
 
 <p> For example if you want to use dot notation to call a function on a number this would blow up:</p>
@@ -208,7 +429,8 @@ useful to worry about them. Spending hours on stupid, easily preventable bugs do
 
 
 
-<p><h3> In progress&hellip; >/h3></p>
+<h3> In progress... </h3>
+
 ]]></content>
   </entry>
   

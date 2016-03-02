@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Primitives - instance of Nataliya</title>
+  <title>Wrapper Objects and Primitives Behind the Scenes. - instance of Nataliya</title>
   <meta name="author" content="Nataliya">
 
   
-  <meta name="description" content=""So what's the difference between a Primitive and an Object?" I hope that after reading this, you will be able to find something insightful or &hellip;">
+  <meta name="description" content="In order to get deep with wrapper objects and how primitives really work, we will quickly go over the basics of objects and primitives, compare them &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://nat-ser.github.io/blog/2016/01/18/primitives">
+  <link rel="canonical" href="http://nat-ser.github.io/blog/2016/01/18/wrapper-objects-and-primitives-behind-the-scenes">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="instance of Nataliya" type="application/atom+xml">
@@ -59,7 +59,7 @@
   
   <header>
     
-      <h1 class="entry-title">Primitives</h1>
+      <h1 class="entry-title">Wrapper Objects and Primitives Behind the Scenes.</h1>
     
     
       <p class="meta">
@@ -83,25 +83,18 @@
   </header>
 
 
-<div class="entry-content"><h2> "So what's the difference between a Primitive and an Object?"</h2>
+<div class="entry-content"><p>In order to get deep with wrapper objects and how primitives really work, we will quickly go over the basics of objects and primitives, compare them, and then get to the good stuff.</p>
+
+<h4> What are the differences between Objects and Primitives?</h4>
 
 
-<!-- <img src="http://www.reshareit.com/wp-content/uploads/When-you-have-no-answer-gif.gif"> -->
-
-
-<p><img src="http://i.imgur.com/qQ9ifnb.gif"></p>
-
-<p>I hope that after reading this, you will be able to find something insightful or interesting to say on the subject. </p>
-
-
-<p>Let's start off with some nice definitions by people that are smart:</p>
-
-
-<p><strong>Primitive</strong> -&ldquo;Type provided by the system. The primitive types are treated by JavaScript as value types and when you pass them around they go as values.&rdquo; (Wikibooks?) Primitive types are: Number, Boolean, String, Symbol, undefined, and null.</p>
+<p><img src="http://i.imgur.com/qQ9ifnb.gif">
+<br>
+<strong>Primitive</strong> -&ldquo;Type provided by the system. The primitive types are treated by JavaScript as value types and when you pass them around they go as values.&rdquo; (Wikibooks?) Primitive types are: Number, Boolean, String, Symbol, undefined, and null.</p>
 
 <p><strong>Object</strong> - &ldquo;Container of properties, where a property has a name and a value&rdquo; (Douglas Crockford) Basically, everything else that is not a Primitive is an object.</p>
 
-<h2> Main Differences between Primitives and Objects </h2>
+<h4> Main Differences between Primitives and Objects </h4>
 
 
 <p> 1) <strong>Comparison</strong> - In broad terms, Primitives are defined by their value while Objects are defined by their reference. In other words, every time you use a Primitive data type, like a number, it is equal to any other variable with the same value. However, objects all have a unique identity only equal to itself even if their values are equal. Let's look at an example of this:   </p>
@@ -162,7 +155,7 @@
 
 
 
-<h2>Wrapper Objects</h2>
+<h4>Wrapper Objects</h4>
 
 
 <p> Great, JavaScript is finally making some sense. Let's look at this next example. </p>
@@ -234,7 +227,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://nat-ser.github.io/blog/2016/01/18/primitives/" data-via="" data-counturl="http://nat-ser.github.io/blog/2016/01/18/primitives/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://nat-ser.github.io/blog/2016/01/18/wrapper-objects-and-primitives-behind-the-scenes/" data-via="" data-counturl="http://nat-ser.github.io/blog/2016/01/18/wrapper-objects-and-primitives-behind-the-scenes/" >Tweet</a>
   
   
   
@@ -243,8 +236,10 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2016/01/15/prepare-for-the-worst/" title="Previous Post: Prepare for the worst.">&laquo; Prepare for the worst.</a>
+        <a class="basic-alignment left" href="/blog/2015/12/15/prepare-for-the-worst/" title="Previous Post: Prepare for the worst.">&laquo; Prepare for the worst.</a>
       
+      
+        <a class="basic-alignment right" href="/blog/2016/02/21/parser-with-method-chaining/" title="Next Post: parser with method chaining">parser with method chaining &raquo;</a>
       
     </p>
   </footer>
@@ -267,11 +262,15 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2016/01/18/primitives/">Primitives</a>
+        <a href="/blog/2016/02/21/parser-with-method-chaining/">Parser With Method Chaining</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2016/01/15/prepare-for-the-worst/">Prepare for the Worst.</a>
+        <a href="/blog/2016/01/18/wrapper-objects-and-primitives-behind-the-scenes/">Wrapper Objects and Primitives Behind the Scenes.</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/12/15/prepare-for-the-worst/">Prepare for the Worst.</a>
       </li>
     
   </ul>
