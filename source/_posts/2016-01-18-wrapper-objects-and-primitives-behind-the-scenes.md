@@ -1,21 +1,19 @@
 ---
 layout: post
-title: "Primitives"
+title: "wrapper objects and primitives behind the scenes."
 date: 2016-01-18 14:53:41 -0500
 comments: true
 categories: "flatiron_school primitives objects data_types JavaScript"
 ---
-<h2> "So what's the difference between a Primitive and an Object?"</h2>
-<!-- {% img http://www.reshareit.com/wp-content/uploads/When-you-have-no-answer-gif.gif %} -->
-
+In order to get deep with wrapper objects and how primitives really work, we will quickly go over the basics of objects and primitives, compare them, and then get to the good stuff.
+<h4> What are the differences between Objects and Primitives?</h4>
 {%img http://i.imgur.com/qQ9ifnb.gif %}
-<p>I hope that after reading this, you will be able to find something insightful or interesting to say on the subject. </p>
-<p>Let's start off with some nice definitions by people that are smart:</p>
+<br>
 <strong>Primitive</strong> -"Type provided by the system. The primitive types are treated by JavaScript as value types and when you pass them around they go as values." (Wikibooks?) Primitive types are: Number, Boolean, String, Symbol, undefined, and null.
 
 <strong>Object</strong> - "Container of properties, where a property has a name and a value" (Douglas Crockford) Basically, everything else that is not a Primitive is an object.
 
-<h2> Main Differences between Primitives and Objects </h2>
+<h4> Main Differences between Primitives and Objects </h4>
 <p> 1) <strong>Comparison</strong> - In broad terms, Primitives are defined by their value while Objects are defined by their reference. In other words, every time you use a Primitive data type, like a number, it is equal to any other variable with the same value. However, objects all have a unique identity only equal to itself even if their values are equal. Let's look at an example of this:   </p>
       EACH OBJECT HAS UNIQUE IDENTITY                                                      PRIMITIVE DOES NOT
 {% img /images/object_comparison.png %}
@@ -45,7 +43,7 @@ categories: "flatiron_school primitives objects data_types JavaScript"
 <p> As you can see, on the left we created a new String object and gave it a banana method. Since the property banana was assigned to the object, it still works when we call it. With primitive on the right that does not work. Even though the variable "another_string" is also just a string, when we try to assign the property banana to it, it returns undefined.</p>
 
 
-<h2>Wrapper Objects</h2>
+<h4>Wrapper Objects</h4>
 <p> Great, JavaScript is finally making some sense. Let's look at this next example. </p>
     WAT
 {% img /images/why.png %}

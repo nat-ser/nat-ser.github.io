@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Prepare for the worst."
-date: 2016-01-15 14:53:41 -0500
+date: 2015-12-15 14:53:41 -0500
 comments: true
 categories: "Flatiron_School hacks JavaScript"
 ---
@@ -14,7 +14,7 @@ useful to worry about them. Spending hours on stupid, easily preventable bugs do
 
 
 
-<h2> Don't define local variables like an asshole </h2>
+<h4> Don't define local variables like an asshole </h4>
 <p> People are very fussy about JavaScript's global variables. Here's the reason. A global variable is one that is available from any function in the program as opposed to just within the block of the method. Global variables are the default in JavaScript. If you want a variable to have local scope, you need to specify the declaration with a var ___ keyword. This is an example of how to do this right:</p>
     RIGHT WAY
 {% img /images/right.png %}
@@ -27,7 +27,7 @@ useful to worry about them. Spending hours on stupid, easily preventable bugs do
 
 <p>So why is this bad? It can result in collisions down the line. It's particularly annoying to find these type of bugs, especially if you don't realize that you forgot a "var" somewhere at some point. So stop it!</p>
 
-<h2> How to call a method on a number </h2>
+<h4> How to call a method on a number </h4>
 <p> For example if you want to use dot notation to call a function on a number this would blow up:</p>
     WRONG WAY
 {% codeblock lang:ruby %}
@@ -42,4 +42,4 @@ useful to worry about them. Spending hours on stupid, easily preventable bugs do
 {% endcodeblock %}    
 <p> All output "9" and bypass the parser bug</p>
 
-<h3> In progress... >/h3>
+<h3> In progress... </h3>
