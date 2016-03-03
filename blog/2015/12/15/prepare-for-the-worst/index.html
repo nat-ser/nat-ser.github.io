@@ -3,15 +3,15 @@
 <!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
 <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+
 <head>
   <meta charset="utf-8">
   <title>Prepare for the Worst. - instance of Nataliya</title>
   <meta name="author" content="Nataliya Seryakova">
 
   
-  <meta name="description" content="There are awful things that could happen to you in Javascript. It is simultaneously intriguing and
-useful to worry about them. Spending hours on &hellip;">
-  
+  <meta name="description" content="What are some things to watch out for with Javascript">
+  <meta name="keywords" content="Javascript">
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -50,6 +50,8 @@ useful to worry about them. Spending hours on &hellip;">
 <body   >
   <header role="banner"><hgroup>
   <h1><a href="/">instance of Nataliya</a></h1>
+  
+    <h2>I write stuff on internetz.</h2>
   
 </hgroup>
 
@@ -199,7 +201,7 @@ useful to worry about them. Spending hours on stupid, easily preventable bugs do
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/flatiron-school/'>flatiron_school</a>, <a class='category' href='/blog/categories/hacks/'>hacks</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a>
+    <a class='category' href='/blog/categories/flatiron-school/'>flatiron_school</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a>, <a class='category' href='/blog/categories/worst-parts/'>worst parts</a>
   
 </span>
 
@@ -253,6 +255,35 @@ useful to worry about them. Spending hours on stupid, easily preventable bugs do
       </li>
     
   </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/nat-ser">@nat-ser</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'nat-ser',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
 </section>
 
 

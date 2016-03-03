@@ -22,7 +22,7 @@
     <loc>http://nat-ser.github.io/blog/categories/flatiron-school/</loc>
   </url>
   <url>
-    <loc>http://nat-ser.github.io/blog/categories/hacks/</loc>
+    <loc>http://nat-ser.github.io/blog/categories/worst-parts/</loc>
   </url>
   <url>
     <loc>http://nat-ser.github.io/blog/categories/javascript/</loc>
@@ -31,9 +31,33 @@
     <loc>http://nat-ser.github.io/blog/categories/primitives/</loc>
   </url>
   <url>
+    <loc>http://nat-ser.github.io/blog/categories/data-types/</loc>
+  </url>
+  <url>
+    <loc>http://nat-ser.github.io/blog/categories/js/</loc>
+  </url>
+  <url>
     <loc>http://nat-ser.github.io/blog/categories/objects/</loc>
   </url>
   <url>
-    <loc>http://nat-ser.github.io/blog/categories/data-types/</loc>
+    <loc>http://nat-ser.github.io/blog/categories/wrapper-objects/</loc>
+  </url>
+  <url>
+    <loc>http://nat-ser.github.io/blog/categories/method-chaining/</loc>
+  </url>
+  <url>
+    <loc>http://nat-ser.github.io/blog/categories/self/</loc>
+  </url>
+  <url>
+    <loc>http://nat-ser.github.io/blog/categories/classes/</loc>
+  </url>
+  <url>
+    <loc>http://nat-ser.github.io/blog/categories/ruby/</loc>
+  </url>
+  <url>
+    <loc>http://nat-ser.github.io/blog/categories/parsing/</loc>
+  </url>
+  <url>
+    <loc>http://nat-ser.github.io/blog/categories/hashes/</loc>
   </url>
 </urlset>

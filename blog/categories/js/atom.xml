@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Primitives | instance of Nataliya]]></title>
-  <link href="http://nat-ser.github.io/blog/categories/primitives/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Js | instance of Nataliya]]></title>
+  <link href="http://nat-ser.github.io/blog/categories/js/atom.xml" rel="self"/>
   <link href="http://nat-ser.github.io/"/>
   <updated>2016-03-03T10:08:54-05:00</updated>
   <id>http://nat-ser.github.io/</id>
