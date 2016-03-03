@@ -3,7 +3,9 @@ layout: post
 title: "Prepare for the worst."
 date: 2015-12-15 14:53:41 -0500
 comments: true
-categories: "Flatiron_School hacks JavaScript"
+categories: [Flatiron_School, worst parts, JavaScript]
+keywords: Javascript
+description: What are some things to watch out for with Javascript
 ---
 
 {% img http://cdn2.crushable.com/wp-content/uploads/2014/12/groundhog-day.gif %}
