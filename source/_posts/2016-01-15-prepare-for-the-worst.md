@@ -3,7 +3,7 @@ layout: post
 title: "Prepare for the worst."
 date: 2015-12-15 14:53:41 -0500
 comments: true
-categories: [Flatiron_School, worst parts, JavaScript]
+categories: [Flatiron School, worst parts, JavaScript]
 keywords: Javascript
 description: What are some things to watch out for with Javascript
 ---

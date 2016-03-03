@@ -3,8 +3,8 @@ layout: post
 title: "wrapper objects and primitives behind the scenes."
 date: 2016-01-18 14:53:41 -0500
 comments: true
-categories: [Flatiron_School, Primitives, data_types, JS, objects, JavaScript, Wrapper_Objects]
-keywords: Javascript,Flatiron_School, primitives, data_types, JS, objects, JavaScript, Nataliya_Seryakova, wrapper_objects, Wrapper_Objects
+categories: [Flatiron School, Primitives, data types, JS, objects, JavaScript, Wrapper Objects]
+keywords: Javascript,Flatiron School, primitives, data types, JS, objects, JavaScript, Nataliya Seryakova, wrapper_objects, Wrapper_Objects
 description: What are the differences between objects and primitives? How do Wrapper Objects work behind the scenes?
 ---
 In order to get deep with wrapper objects and how primitives really work, we will quickly go over the basics of objects and primitives, compare them, and then get to the good stuff.

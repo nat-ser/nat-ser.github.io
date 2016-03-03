@@ -3,8 +3,8 @@ layout: post
 title: "parser with method chaining"
 date: 2016-02-21
 comments: true
-categories: [Flatiron_School, method_chaining, self, Classes, Ruby, parsing, hashes]
-keywords: Ruby, Flatiron_School, Method_chaining, self, parsing, hashes, data_parser, Nataliya_Seryakova
+categories: [Flatiron School, method chaining, self, Classes, Ruby, parsing, hashes]
+keywords: Ruby, Flatiron School, Method chaining, self, parsing, hashes, data parser, Nataliya Seryakova
 description: Data parser with method chaining in Ruby
 ---
 <h4>Chaining as we know it </h4>
